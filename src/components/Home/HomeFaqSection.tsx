@@ -154,10 +154,7 @@ export const HomeFaqSection: React.FC = () => {
                       </span>
                     </div>
 
-                    <div className="shrink-0 flex items-center gap-2">
-                      <span className="hidden sm:inline-block text-[11px] font-semibold text-blue-600 bg-blue-50/80 px-2 py-0.5 rounded border border-blue-100">
-                        {faq.category}
-                      </span>
+                    <div className="shrink-0 flex items-center">
                       <div className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors ${isOpen ? 'bg-blue-50 text-blue-600' : 'bg-slate-100/80 text-slate-500 group-hover:bg-blue-50 group-hover:text-blue-600'}`}>
                         <ChevronDown
                           className={`w-4 h-4 transition-transform duration-200 ${
