@@ -13,7 +13,8 @@ import {
   ArrowRight, 
   CheckCircle2,
   ChevronRight,
-  Zap
+  Zap,
+  Users
 } from 'lucide-react';
 
 interface StepItem {
@@ -22,7 +23,7 @@ interface StepItem {
   badgeColor: string;
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   highlights: string[];
   icon: React.ComponentType<{ className?: string }>;
   ctaText?: string;
@@ -38,8 +39,7 @@ export const HowItWorksSection: React.FC = () => {
       badge: 'Free',
       badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
       title: 'Profile & ATS Resume',
-      subtitle: 'ATS Checker & Portfolio',
-      description: 'Build an ATS-optimized resume or launch a 1-click web portfolio with GitHub projects & certifications.',
+      subtitle: 'ATS Resume & Portfolio',
       highlights: ['ATS Resume Checker', 'Shareable Portfolio URL'],
       icon: FileText,
       ctaText: 'Build ATS Resume',
@@ -47,27 +47,25 @@ export const HowItWorksSection: React.FC = () => {
     },
     {
       number: '02',
-      badge: 'Verified',
+      badge: 'Find Jobs',
       badgeColor: 'bg-blue-50 text-blue-700 border-blue-200/60',
-      title: 'Discover Roles',
-      subtitle: 'Freshers & Internships',
-      description: 'Filter verified openings with transparent salaries and apply directly with 0 placement fees.',
-      highlights: ['Transparent Salaries', 'Direct Recruiter Reach'],
+      title: 'Find Jobs & Internships',
+      subtitle: 'Verified Openings for Freshers',
+      highlights: ['Search & Filter 10K+ Jobs', 'Direct 1-Click Applications'],
       icon: Search,
-      ctaText: 'Browse Jobs',
+      ctaText: 'Find Jobs Now',
       ctaLink: '/jobs'
     },
     {
       number: '03',
-      badge: 'AI Badges',
+      badge: 'Get Discovered',
       badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200/60',
-      title: 'AI Practice & Prep',
-      subtitle: 'Automated Interview Prep',
-      description: 'Take AI mock interviews and coding challenges to earn verified badges and stand out to top teams.',
-      highlights: ['AI Mock Interviews', 'Verified Skill Badges'],
-      icon: Bot,
-      ctaText: 'View Challenges',
-      ctaLink: '/challenges'
+      title: 'Employer Profile Search',
+      subtitle: 'Employers Search Your Profile',
+      highlights: ['Recruiters Search Profiles', 'Verified Skill & GitHub Badges'],
+      icon: Users,
+      ctaText: 'View Candidate Search',
+      ctaLink: '/candidates'
     },
     {
       number: '04',
@@ -75,62 +73,57 @@ export const HowItWorksSection: React.FC = () => {
       badgeColor: 'bg-amber-50 text-amber-800 border-amber-200/60',
       title: 'Interview & Offers',
       subtitle: 'Direct Offers & 0% Fees',
-      description: 'Book recruiter calendar slots directly, interview with hiring teams, and secure 100% take-home offers.',
-      highlights: ['Calendar Sync', '0% Salary Deduction'],
+      highlights: ['Calendar Sync with Recruiters', '100% Salary, Zero Commission'],
       icon: Rocket,
-      ctaText: 'Explore Talent',
-      ctaLink: '/#talent-pool'
+      ctaText: 'Browse Openings',
+      ctaLink: '/jobs'
     }
   ];
 
   const employerSteps: StepItem[] = [
     {
       number: '01',
-      badge: '2.5L+ Pool',
+      badge: 'Search Talent',
       badgeColor: 'bg-blue-50 text-blue-700 border-blue-200/60',
-      title: 'Post Job or Search',
-      subtitle: 'Targeted Skill Matching',
-      description: 'Publish jobs in 2 minutes or filter 2.5L+ pre-screened freshers and developers by verified tech stack.',
-      highlights: ['Free Job Posting', '2.5L+ Verified Talent'],
-      icon: Building2,
-      ctaText: 'Post a Job',
-      ctaLink: '/employers/post-job'
+      title: 'Search Candidate Profiles',
+      subtitle: '2.5L+ Pre-Screened Talent',
+      highlights: ['Search Profiles by Tech Stack', 'View GitHub Repos & Portfolios'],
+      icon: Search,
+      ctaText: 'Search Profiles',
+      ctaLink: '/candidates'
     },
     {
       number: '02',
-      badge: 'Autopilot',
+      badge: 'Post Jobs',
       badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200/60',
-      title: 'AI Screening & Tests',
-      subtitle: 'Automated Shortlisting',
-      description: 'AI agent screens applicants, auto-dispatches coding tests, and surfaces top-tier candidate matches.',
-      highlights: ['AI Resume Ranker', 'Auto-Coding Challenges'],
+      title: 'Post Jobs Free',
+      subtitle: 'Candidates Find Your Openings',
+      highlights: ['Post Vacancies in 2 Minutes', 'Instant Candidate Applications'],
+      icon: Building2,
+      ctaText: 'Post a Job Free',
+      ctaLink: '/employers/post-job'
+    },
+    {
+      number: '03',
+      badge: 'AI Screening',
+      badgeColor: 'bg-purple-50 text-purple-700 border-purple-200/60',
+      title: 'AI Screening & Match',
+      subtitle: 'Automated Candidate Match',
+      highlights: ['AI Resume & Skill Ranker', 'Auto-Coding Challenges'],
       icon: Sparkles,
       ctaText: 'Hiring Automation',
       ctaLink: '/#hiring-automation'
     },
     {
-      number: '03',
-      badge: '1-Click Sync',
-      badgeColor: 'bg-purple-50 text-purple-700 border-purple-200/60',
-      title: 'Calendar Interviews',
-      subtitle: 'Direct Slot Booking',
-      description: 'Candidates book open slots directly on your Google or Outlook calendar with automated notifications.',
-      highlights: ['Google & Outlook Sync', 'Smart Auto-Reminders'],
-      icon: CalendarCheck,
-      ctaText: 'Employer Portal',
-      ctaLink: '/employer'
-    },
-    {
       number: '04',
       badge: '0% Fees',
       badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
-      title: 'Hire in 48 Hours',
-      subtitle: 'Zero Commission Hiring',
-      description: 'Extend direct offers and build high-performance teams in days without expensive agency cuts.',
-      highlights: ['Fast 48-Hour Cycle', '0% Commission Fees'],
+      title: 'Direct Calendar Hire',
+      subtitle: 'Fast 48-Hour Turnaround',
+      highlights: ['1-Click Calendar Booking', 'Zero Placement Commissions'],
       icon: TrendingUp,
-      ctaText: 'Search Talent',
-      ctaLink: '/candidates/search'
+      ctaText: 'Employer Portal',
+      ctaLink: '/employer'
     }
   ];
 
@@ -149,7 +142,7 @@ export const HowItWorksSection: React.FC = () => {
         <div className="bg-white rounded-2xl lg:rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgb(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-4 py-3.5 sm:px-6 sm:py-4 lg:px-7 lg:py-5 relative overflow-hidden">
           
           {/* SLIM SECTION HEADER */}
-          <div className="text-center max-w-2xl mx-auto mb-3.5 sm:mb-4 space-y-1">
+          <div className="text-center max-w-2xl mx-auto mb-3 sm:mb-3.5 space-y-1">
             <span className="text-[11px] font-semibold text-blue-600 tracking-wider uppercase inline-flex items-center gap-1">
               <Zap className="w-3 h-3 text-blue-600" />
               HOW IT WORKS
@@ -159,12 +152,8 @@ export const HowItWorksSection: React.FC = () => {
               Simple 4-Step Process <span className="text-blue-600">for Candidates & Employers</span>
             </h2>
 
-            <p className="text-xs text-slate-500 max-w-lg mx-auto font-normal leading-normal">
-              Whether you are applying for your next role or building an engineering team, here is how Glitread works with zero fees.
-            </p>
-
             {/* COMPACT ROLE SWITCHER TOGGLE */}
-            <div className="pt-1.5 flex justify-center">
+            <div className="pt-1 flex justify-center">
               <div className="inline-flex items-center p-1 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-2xs gap-1">
                 <button
                   type="button"
@@ -235,13 +224,8 @@ export const HowItWorksSection: React.FC = () => {
                     <h3 className="text-[13px] sm:text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight font-display mb-0.5 leading-snug">
                       {step.title}
                     </h3>
-                    <p className="text-[10px] font-semibold text-blue-600/90 uppercase tracking-wider mb-1.5">
+                    <p className="text-[10px] font-semibold text-blue-600/90 uppercase tracking-wider mb-2">
                       {step.subtitle}
-                    </p>
-
-                    {/* Description */}
-                    <p className="text-[11px] text-slate-500 leading-snug mb-2">
-                      {step.description}
                     </p>
 
                     {/* Highlights List */}
