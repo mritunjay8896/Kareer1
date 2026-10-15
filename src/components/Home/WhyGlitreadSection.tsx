@@ -66,39 +66,39 @@ export const WhyGlitreadSection: React.FC = () => {
 
   return (
     <section 
-      className="relative w-full bg-slate-50/40 py-6 sm:py-8 lg:py-10 px-2 sm:px-4 lg:px-6 border-none overflow-hidden" 
+      className="relative w-full bg-[#F8FAFC] py-6 sm:py-8 lg:py-10 px-2 sm:px-4 lg:px-6 border-none overflow-hidden" 
       id="why-glitread"
     >
       <div className="w-full max-w-[1340px] mx-auto relative z-10">
-        <div className="bg-white rounded-2xl lg:rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgb(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-5 py-3.5 sm:px-7 sm:py-4 lg:px-8 lg:py-4.5 relative overflow-hidden">
+        <div className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_10px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-5 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6 relative overflow-hidden">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center py-2 sm:py-2.5 lg:py-3 px-1 sm:px-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center py-2 px-1 sm:px-2">
             
             {/* Left Headline & Description */}
-            <div className="lg:col-span-5 text-left space-y-1 flex flex-col justify-center">
-              <span className="text-[11px] font-semibold text-blue-600 tracking-wider uppercase block">
+            <div className="lg:col-span-5 text-left space-y-1.5 flex flex-col justify-center">
+              <span className="text-[11px] font-bold text-blue-600 tracking-wider uppercase block">
                 WHY GLITREAD?
               </span>
-              <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-slate-900 tracking-tight leading-snug font-display">
+              <h3 className="text-base sm:text-lg lg:text-[20px] font-bold text-slate-950 tracking-tight leading-snug font-display">
                 Everything You Need in One Platform
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 font-normal leading-relaxed max-w-sm">
+              <p className="text-xs sm:text-[13px] text-slate-600 font-medium leading-relaxed max-w-sm">
                 From hiring to career growth — we provide the tools, talent and technology to make it happen, faster and smarter.
               </p>
             </div>
 
             {/* Right: 5 Value Pillars strictly matching screenshot */}
             <div className="lg:col-span-7">
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2.5 sm:gap-3 lg:gap-3.5 items-start justify-items-center">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2.5 sm:gap-3 lg:gap-4 items-start justify-items-center">
                 {features.map((item) => (
                   <div key={item.id} className="flex flex-col items-center text-center group cursor-default">
                     {/* Squircle Tile */}
-                    <div className={`w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] rounded-[15px] sm:rounded-[18px] flex items-center justify-center ${item.bgClass} shadow-2xs group-hover:scale-105 transition-transform duration-200 [&>svg]:w-5.5 [&>svg]:h-5.5 sm:[&>svg]:w-6 sm:[&>svg]:h-6`}>
+                    <div className={`w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] rounded-2xl flex items-center justify-center ${item.bgClass} shadow-2xs group-hover:scale-105 group-hover:shadow-md transition-all duration-200 [&>svg]:w-5.5 [&>svg]:h-5.5 sm:[&>svg]:w-6 sm:[&>svg]:h-6`}>
                       {item.icon}
                     </div>
 
                     {/* 2-line Label */}
-                    <div className="mt-1.5 text-[11px] sm:text-xs font-semibold text-slate-800 text-center leading-tight">
+                    <div className="mt-2 text-[11px] sm:text-xs font-semibold text-slate-800 text-center leading-tight">
                       <div>{item.line1}</div>
                       <div>{item.line2}</div>
                     </div>

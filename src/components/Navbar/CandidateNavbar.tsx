@@ -217,33 +217,34 @@ export const CandidateNavbar: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div className="flex items-center gap-2">
-              {/* Candidate Portal Switcher CTA - Blue Theme Button */}
+            <div className="flex items-center gap-2.5">
+              {/* Candidate Portal Switcher CTA */}
               <Link
                 to="/login"
-                className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-xs shadow-blue-500/20 transition-all inline-flex items-center justify-center whitespace-nowrap cursor-pointer active:scale-95"
+                className="px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-700 hover:text-blue-600 bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-slate-300 transition-all shadow-2xs"
                 title="Switch to Candidate Portal"
               >
                 Candidate Portal
               </Link>
 
-              <div className="w-px h-5 bg-slate-200 mx-1 shrink-0" />
+              <div className="w-px h-5 bg-slate-200 shrink-0" />
 
               <div className="flex items-center gap-2">
-                {/* Employer Login - Complementary Slate Background Button */}
+                {/* Employer Login */}
                 <Link
                   to="/employers/login"
-                  className="px-3.5 py-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 bg-slate-100/90 hover:bg-slate-200/90 border border-slate-200/80 rounded-xl transition-all shadow-2xs"
+                  className="px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors"
                 >
                   Employer Login
                 </Link>
-                {/* Post Job Free - Vibrant Yellowish-Orange Button */}
+
+                {/* Post Job Free - Enterprise Dark Blue CTA */}
                 <Link
                   to="/employers/register"
-                  className="px-3.5 py-1.5 bg-gradient-to-r from-amber-400 via-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-950 font-extrabold text-xs rounded-xl shadow-xs shadow-amber-400/25 transition-all flex items-center gap-1.5 active:scale-95 whitespace-nowrap group"
+                  className="px-4 py-1.5 bg-[#1E40AF] hover:bg-[#1D4ED8] text-white font-bold text-xs rounded-xl shadow-xs hover:shadow-md hover:shadow-blue-900/20 transition-all flex items-center gap-1.5 active:scale-95 whitespace-nowrap group"
                 >
                   <span>Post Job Free</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-950/90 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 text-white/90 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>

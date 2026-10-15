@@ -49,33 +49,38 @@ const AUTOMATION_CARDS: AutomationCard[] = [
 
 export const HiringAutomationSection: React.FC = () => {
   return (
-    <section id="hiring-automation" className="relative w-full bg-slate-50/40 py-6 sm:py-8 lg:py-10 px-2 sm:px-4 lg:px-6 border-none overflow-hidden">
+    <section id="hiring-automation" className="relative w-full bg-[#F8FAFC] py-6 sm:py-8 lg:py-10 px-2 sm:px-4 lg:px-6 border-none overflow-hidden">
       {/* Ambient background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-blue-50/50 rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none -z-0" />
       
       <div className="w-full max-w-[1340px] mx-auto relative z-10">
-        <div className="bg-white rounded-2xl lg:rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgb(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-5 py-6 sm:px-7 sm:py-8 lg:px-8 lg:py-9 relative overflow-hidden">
+        <div className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_10px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-6 py-7 sm:px-8 sm:py-9 lg:px-11 lg:py-10 relative overflow-hidden">
         
           {/* SECTION HEADER */}
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2.5">
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-900 tracking-tight font-display leading-snug">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
+            <span className="text-[11px] font-bold text-blue-600 tracking-wider uppercase block">
+              HIRING AUTOMATION SUITE
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-950 tracking-tight font-display leading-tight">
               Screen, Test & Interview Candidates <br className="hidden sm:inline" />
-              <span className="text-blue-600">On Complete Autopilot</span>
+              <span className="bg-gradient-to-r from-[#2563EB] to-[#1E40AF] bg-clip-text text-transparent">
+                On Complete Autopilot
+              </span>
             </h2>
 
-            <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl mx-auto font-medium">
               Cut recruitment turnaround from 3 weeks to 48 hours. Deploy AI-driven preliminary interviews, assign hands-on coding tests, and sync interviews directly into your calendar.
             </p>
           </div>
 
-          {/* 6 CARDS GRID: NO TAGS, FAKE IMAGE AND TEXT ONLY */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 items-stretch">
+          {/* 6 CARDS GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-6.5 items-stretch">
             {AUTOMATION_CARDS.map((card) => (
               <div
                 key={card.id}
-                className="bg-slate-50/60 hover:bg-white border border-slate-200/80 hover:border-blue-300 rounded-2xl p-5 sm:p-5.5 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col group overflow-hidden"
+                className="bg-white hover:bg-slate-50/50 border border-slate-200/90 hover:border-blue-300 rounded-2xl p-5 sm:p-5.5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_14px_34px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col group overflow-hidden"
               >
-                <div className="overflow-hidden rounded-xl bg-slate-100 aspect-[16/10] mb-4">
+                <div className="overflow-hidden rounded-xl bg-slate-100 aspect-[16/10] mb-4.5 border border-slate-100">
                   <img
                     src={card.imageUrl}
                     alt={card.title}
@@ -84,7 +89,7 @@ export const HiringAutomationSection: React.FC = () => {
                   />
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight font-display mb-1.5 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-base sm:text-[17px] font-bold text-slate-950 tracking-tight font-display mb-1.5 group-hover:text-blue-600 transition-colors">
                   {card.title}
                 </h3>
                 
@@ -96,43 +101,43 @@ export const HiringAutomationSection: React.FC = () => {
           </div>
 
           {/* BOTTOM QUICK-METRICS STRIP */}
-          <div className="mt-8 sm:mt-10 bg-slate-50/60 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xs">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+          <div className="mt-8 sm:mt-10 bg-[#F8FAFC] border border-slate-200/80 rounded-2xl p-6 sm:p-7 shadow-2xs">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-slate-200/70">
               <div className="px-2 sm:px-4">
-                <span className="text-2xl sm:text-3xl font-bold text-blue-600 font-display">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#1E40AF] font-display">
                   72%
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900 mt-1">Faster Time-to-Hire</p>
-                <p className="text-xs text-slate-500 mt-0.5">From candidate apply to first technical round</p>
+                <p className="text-xs sm:text-sm font-bold text-slate-900 mt-1">Faster Time-to-Hire</p>
+                <p className="text-xs text-slate-500 font-medium mt-0.5">From candidate apply to first technical round</p>
               </div>
 
               <div className="px-2 sm:px-4 pt-4 sm:pt-0">
-                <span className="text-2xl sm:text-3xl font-bold text-emerald-600 font-display">
+                <span className="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-display">
                   Zero
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900 mt-1">Resume Spam</p>
-                <p className="text-xs text-slate-500 mt-0.5">Pre-screened against real coding benchmarks</p>
+                <p className="text-xs sm:text-sm font-bold text-slate-900 mt-1">Resume Spam</p>
+                <p className="text-xs text-slate-500 font-medium mt-0.5">Pre-screened against real coding benchmarks</p>
               </div>
 
               <div className="px-2 sm:px-4 pt-4 sm:pt-0">
-                <span className="text-2xl sm:text-3xl font-bold text-indigo-600 font-display">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#2563EB] font-display">
                   24/7
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900 mt-1">Automated AI Interviews</p>
-                <p className="text-xs text-slate-500 mt-0.5">Screen candidates across any Indian time zone</p>
+                <p className="text-xs sm:text-sm font-bold text-slate-900 mt-1">Automated AI Interviews</p>
+                <p className="text-xs text-slate-500 font-medium mt-0.5">Screen candidates across any Indian time zone</p>
               </div>
 
               <div className="px-2 sm:px-4 pt-4 sm:pt-0">
-                <span className="text-2xl sm:text-3xl font-bold text-amber-500 font-display">
+                <span className="text-2xl sm:text-3xl font-extrabold text-amber-600 font-display">
                   100%
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900 mt-1">Free for Employers</p>
-                <p className="text-xs text-slate-500 mt-0.5">No agency commissions or middleman lock-ins</p>
+                <p className="text-xs sm:text-sm font-bold text-slate-900 mt-1">Free for Employers</p>
+                <p className="text-xs text-slate-500 font-medium mt-0.5">No agency commissions or middleman lock-ins</p>
               </div>
             </div>
 
             {/* FREQUENTLY ASKED QUESTIONS JUMP LINK */}
-            <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <div className="mt-6 pt-5 border-t border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-2 text-slate-600 font-medium text-center sm:text-left">
                 <span className="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                   <HelpCircle className="w-3.5 h-3.5" />
@@ -141,7 +146,7 @@ export const HiringAutomationSection: React.FC = () => {
               </div>
               <a 
                 href="#faq" 
-                className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-semibold transition-colors group cursor-pointer"
+                className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-bold transition-colors group cursor-pointer"
               >
                 <span>Read Frequently Asked Questions</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

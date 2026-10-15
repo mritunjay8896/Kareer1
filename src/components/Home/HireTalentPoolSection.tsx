@@ -237,32 +237,32 @@ export const HireTalentPoolSection: React.FC = () => {
         {/* =========================================================
             PART 1: Hire From Us: 2 Lakh+ Talent Pool & Top Categories
             ========================================================= */}
-        <div className="bg-white rounded-2xl lg:rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgb(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-5 py-5 sm:px-7 sm:py-6 lg:px-8 lg:py-7 relative overflow-hidden">
+        <div className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_10px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 mx-3 sm:mx-6 lg:mx-8 px-6 py-6 sm:px-8 sm:py-7 lg:px-9 lg:py-8 relative overflow-hidden">
           
           {/* Header Row: Title on Left, 3 Stat Badges on Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center pb-6 border-b border-slate-100">
             
             {/* Left Headline & Subtitle */}
-            <div className="lg:col-span-7 text-left space-y-2">
-              <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-slate-900 tracking-tight leading-snug font-display">
-                Hire From Us: <span className="text-blue-600">2 Lakh+ Talent Pool</span>
+            <div className="lg:col-span-7 text-left space-y-2.5">
+              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-slate-950 tracking-tight leading-snug font-display">
+                Hire From Us: <span className="bg-gradient-to-r from-[#2563EB] to-[#1E40AF] bg-clip-text text-transparent">2 Lakh+ Talent Pool</span>
               </h2>
 
-              <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl">
+              <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-xl">
                 Find the right people for your business, from interns and freshers to experienced professionals across India's fastest growing tech and business sectors.
               </p>
 
-              <div className="pt-1 flex items-center gap-3">
+              <div className="pt-1.5 flex items-center gap-3">
                 <Link
                   to="/search-profiles"
-                  className="inline-flex items-center gap-2 bg-[#1565ED] hover:bg-[#0E56D6] text-white font-semibold text-xs sm:text-sm px-4.5 py-2.5 rounded-xl shadow-md shadow-blue-500/20 hover:shadow-lg transition-all group cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-[#1E40AF] hover:bg-[#1D4ED8] text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-xs hover:shadow-md transition-all group cursor-pointer"
                 >
                   <span>Explore Talent Pool</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
                 <Link
                   to="/employers"
-                  className="text-xs sm:text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                  className="text-xs sm:text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
                 >
                   Employer Solutions →
                 </Link>
@@ -271,38 +271,38 @@ export const HireTalentPoolSection: React.FC = () => {
 
             {/* Right Quick-Stats Strip */}
             <div className="lg:col-span-5 grid grid-cols-3 gap-2.5 sm:gap-3">
-              <div className="bg-[#F0F6FF] border border-blue-100/80 rounded-xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#1565ED] flex items-center justify-center mb-1.5">
+              <div className="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-blue-50 text-[#1E40AF] flex items-center justify-center mb-1.5">
                   <Users className="w-4 h-4" />
                 </div>
                 <div className="text-sm sm:text-base font-bold text-slate-900 font-display leading-tight">
                   2,00,000+
                 </div>
-                <div className="text-[10.5px] sm:text-xs text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   Talent Pool
                 </div>
               </div>
 
-              <div className="bg-[#FAF5FF] border border-purple-100/80 rounded-xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center">
-                <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-1.5">
+              <div className="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-1.5">
                   <Globe className="w-4 h-4" />
                 </div>
                 <div className="text-sm sm:text-base font-bold text-slate-900 font-display leading-tight">
                   Multiple
                 </div>
-                <div className="text-[10.5px] sm:text-xs text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   Skills & Domains
                 </div>
               </div>
 
-              <div className="bg-[#ECFDF5] border border-emerald-100/80 rounded-xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center">
-                <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-1.5">
+              <div className="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl p-3 sm:p-3.5 text-center flex flex-col items-center justify-center shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-1.5">
                   <GraduationCap className="w-4 h-4" />
                 </div>
                 <div className="text-sm sm:text-base font-bold text-slate-900 font-display leading-tight">
                   Freshers &
                 </div>
-                <div className="text-[10.5px] sm:text-xs text-slate-500 font-medium leading-tight mt-0.5">
+                <div className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                   Experienced
                 </div>
               </div>
@@ -311,12 +311,12 @@ export const HireTalentPoolSection: React.FC = () => {
           </div>
 
           {/* Top Hiring Categories Subhead & Grid */}
-          <div className="pt-5 text-left">
+          <div className="pt-6 text-left">
             <div className="flex items-center justify-between pb-3.5">
-              <span className="text-xs sm:text-sm font-extrabold text-slate-900 tracking-tight">
+              <span className="text-sm font-bold text-slate-900 tracking-tight font-display">
                 Top Hiring Categories
               </span>
-              <span className="text-[11px] text-slate-400 font-medium">
+              <span className="text-xs text-slate-500 font-semibold">
                 10 Specialized Domains
               </span>
             </div>
@@ -329,35 +329,29 @@ export const HireTalentPoolSection: React.FC = () => {
                   <Link
                     key={cat.id}
                     to={`/search-profiles?role=${encodeURIComponent(cat.filterRole)}`}
-                    className={`group relative overflow-hidden p-3 sm:p-3.5 rounded-xl sm:rounded-2xl ${cat.cardBg} backdrop-blur-xs border ${cat.borderColor} shadow-2xs hover:shadow-md ${cat.hoverGlow} hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between cursor-pointer`}
+                    className="group relative overflow-hidden p-3.5 rounded-2xl bg-white hover:bg-slate-50/80 border border-slate-200/80 hover:border-blue-300 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between cursor-pointer"
                   >
-                    {/* Ambient light transparent CSS bloom / blur orb */}
-                    <div 
-                      className={`absolute -top-6 -right-6 w-20 h-20 rounded-full ${cat.bloomColor} blur-xl pointer-events-none opacity-40 group-hover:opacity-85 group-hover:scale-125 transition-all duration-300`} 
-                      aria-hidden="true"
-                    />
-
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2.5">
-                        <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl ${cat.bgColor} ${cat.iconColor} flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs`}>
-                          <Icon className="w-4 h-4 sm:w-4.5 sm:h-4.5 stroke-[2.2]" />
+                        <div className="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 group-hover:bg-[#1E40AF] group-hover:text-white flex items-center justify-center group-hover:scale-105 transition-all shadow-2xs">
+                          <Icon className="w-4 h-4 stroke-[2.2]" />
                         </div>
-                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${cat.badgeBg} transition-colors`}>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-100/80">
                           {cat.count}
                         </span>
                       </div>
 
-                      <h4 className={`text-xs sm:text-[13px] font-bold text-slate-900 leading-snug ${cat.textColor} transition-colors`}>
+                      <h4 className="text-xs sm:text-[13.5px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug font-display">
                         {cat.name}
                       </h4>
-                      <p className="text-[10.5px] sm:text-[11px] text-slate-500 font-normal leading-tight mt-0.5">
+                      <p className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">
                         {cat.desc}
                       </p>
                     </div>
 
-                    <div className={`relative z-10 pt-2.5 mt-2 border-t ${cat.dividerBorder} flex items-center justify-between text-[10px] font-semibold text-slate-500 ${cat.arrowHover} transition-colors`}>
+                    <div className="relative z-10 pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-slate-500 group-hover:text-blue-600 transition-colors">
                       <span>Browse talent</span>
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </Link>
                 );

@@ -114,40 +114,56 @@ export const HomeFaqSection: React.FC = () => {
   return (
     <section 
       id="faq" 
-      className="relative w-full bg-slate-50/40 py-6 sm:py-8 lg:py-10 px-2 sm:px-4 lg:px-6 border-none overflow-hidden"
+      className="relative w-full bg-[#F8FAFC] py-8 sm:py-12 lg:py-16 px-2 sm:px-4 lg:px-6 border-none overflow-hidden"
       itemScope 
       itemType="https://schema.org/FAQPage"
     >
       {/* Soft ambient background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-blue-50/60 rounded-full blur-3xl pointer-events-none -z-0" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-emerald-50/40 rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none -z-0" />
 
       <div className="w-full max-w-[1340px] mx-auto relative z-10">
         <div className="mx-3 sm:mx-6 lg:mx-8">
           
+          {/* SECTION HEADER */}
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-2">
+            <span className="text-[11px] font-bold text-blue-600 tracking-wider uppercase block">
+              FREQUENTLY ASKED QUESTIONS
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-950 tracking-tight font-display leading-tight">
+              Got Questions? <br />
+              <span className="bg-gradient-to-r from-[#2563EB] to-[#1E40AF] bg-clip-text text-transparent">
+                We've Got Answers.
+              </span>
+            </h2>
+            <p className="text-sm text-slate-600 font-medium leading-relaxed">
+              Everything you need to know about candidate screening, ATS resumes, and hiring automation.
+            </p>
+          </div>
+
           {/* ACCORDION LIST */}
-          <div className="max-w-3xl mx-auto space-y-3">
+          <div className="max-w-3xl mx-auto space-y-3.5">
             {LANDING_FAQS.map((faq, index) => {
               const isOpen = openId === faq.id;
               return (
                 <div
                   key={faq.id}
-                  className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 hover:border-blue-300 shadow-2xs hover:shadow-xs transition-all duration-200 overflow-hidden"
+                  className="bg-white rounded-2xl border border-slate-200/90 hover:border-blue-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-200 overflow-hidden"
                   itemScope
                   itemProp="mainEntity"
                   itemType="https://schema.org/Question"
                 >
                   <button
                     onClick={() => toggleFAQ(faq.id)}
-                    className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-semibold text-slate-900 text-xs sm:text-[14px] hover:text-blue-600 transition-colors cursor-pointer group"
+                    className="w-full text-left p-4.5 sm:p-5 flex items-center justify-between gap-4 font-semibold text-slate-900 text-xs sm:text-[14px] hover:text-blue-600 transition-colors cursor-pointer group"
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 pr-1">
-                      <span className="shrink-0 text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md font-mono">
+                      <span className="shrink-0 text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-100/80 px-2 py-0.5 rounded-md font-mono">
                         0{index + 1}
                       </span>
                       <span 
-                        className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate sm:whitespace-normal font-display"
+                        className="font-bold text-slate-950 group-hover:text-blue-600 transition-colors truncate sm:whitespace-normal font-display"
                         itemProp="name"
                       >
                         {faq.question}
@@ -177,7 +193,7 @@ export const HomeFaqSection: React.FC = () => {
                         itemProp="acceptedAnswer"
                         itemType="https://schema.org/Answer"
                       >
-                        <div className="px-4 sm:px-5 pb-5 pt-2 border-t border-slate-100 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
+                        <div className="px-5 pb-5 pt-2 border-t border-slate-100 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
                           <p itemProp="text">
                             {faq.answer}
                           </p>
@@ -189,7 +205,7 @@ export const HomeFaqSection: React.FC = () => {
                                   key={hIdx}
                                   className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-50 text-slate-700 text-[11px] font-medium border border-slate-200/60"
                                 >
-                                  <CheckCircle2 className="w-3 h-3 text-emerald-500 shrink-0" />
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                                   <span>{highlight}</span>
                                 </span>
                               ))}
@@ -205,18 +221,18 @@ export const HomeFaqSection: React.FC = () => {
           </div>
 
           {/* HELPFUL CONTACT STRIP */}
-          <div className="mt-8 sm:mt-10 max-w-3xl mx-auto p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-50/70 via-slate-50/80 to-blue-50/40 border border-blue-100/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="mt-8 sm:mt-10 max-w-3xl mx-auto p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <div className="space-y-0.5">
-              <p className="text-xs sm:text-sm font-bold text-slate-900 font-display">
+              <p className="text-xs sm:text-sm font-bold text-slate-950 font-display">
                 Still have questions or need custom talent matching?
               </p>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-slate-500 font-medium">
                 Our technical hiring team is ready to assist your engineering department.
               </p>
             </div>
             <a
               href="mailto:support@glitread.com"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl shadow-2xs hover:shadow-xs transition-all shrink-0 cursor-pointer"
+              className="px-5 py-2.5 bg-[#1E40AF] hover:bg-[#1D4ED8] text-white text-xs font-bold rounded-xl shadow-xs hover:shadow-md transition-all shrink-0 cursor-pointer"
             >
               Contact Support
             </a>
