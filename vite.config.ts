@@ -20,7 +20,7 @@ function githubPagesSpaPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
-    base: '/',
+    base: process.env.BASE_PATH || '/',
     plugins: [react(), tailwindcss(), githubPagesSpaPlugin()],
     resolve: {
       alias: {
